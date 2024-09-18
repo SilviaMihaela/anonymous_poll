@@ -1,0 +1,16 @@
+{
+  "name": "anonymous_poll",
+  "version": "1.0.0",
+  "description": "poll for anonymous voting",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silvia Macarie",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "pg": "^8.12.0"
+  }
+}
