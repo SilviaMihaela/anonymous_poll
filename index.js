@@ -41,7 +41,7 @@ const middleware = {
         const validKeys = keys.indexOf(input) !== -1 && keyStatus.rows[0].has_voted === false;
     
         
-        //if the code is valid, lets the user get to the voting page, if not lets them know something is wrong
+        //if the code is valid, lets the user get to the voting page, if not, lets them know something is wrong
     if(validKeys)  {
         try { 
             await db.query("UPDATE identification_keys SET has_voted = ($1) WHERE key = $2", [voted, input]);
@@ -54,7 +54,7 @@ const middleware = {
             console.log("eroare!", err);
         };
     } else {
-        res.render("codeError.ejs");
+        res.render("keyError.ejs");
     };
     next();
     },
